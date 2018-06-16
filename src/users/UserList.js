@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import UserListHeader from "./UserListHeader";
 
 class UserList extends Component {
+
+    state = {users : []};
+
+    componentWillMount() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => this.setState({users : json}))
+    }
+
+    componentDidMount(){
+        console.log('componentDidMount');
+    }
+
     render() {
         return (
             <div>
@@ -13,14 +26,7 @@ class UserList extends Component {
         );
     }
 
-    componentWillMount() {
 
-        this.setState({users : []});
-
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(json => this.setState({users : json}))
-    }
 }
 
 export default UserList;

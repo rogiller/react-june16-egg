@@ -3,6 +3,7 @@ import "./UserList.css";
 
 const UserList = (props) => {
 
+    //fyi, rendering null is fine. React will just render nothing.
     let userTable = null;
 
     if(props.users.length > 0){

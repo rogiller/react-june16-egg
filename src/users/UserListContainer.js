@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UserList from "./UserList";
+import RandomButton from "./RandomButton";
 
 class UserListContainer extends Component {
 
@@ -36,10 +37,12 @@ class UserListContainer extends Component {
     }
 
     render() {
+        console.log('render UserListContainer');
         return (
             <div>
                 <UserList displayText={"USER LIST"} users={this.state.filteredUsers} handleChange={this.handleUserListChange}/>
-                <input type="button" onClick={this.handleRandom} value="CHANGE RANDOM"/>
+                <RandomButton btnName="Random #1 (No State Props)" handleRandom={this.handleRandom}/>
+                <RandomButton btnName="Random #2 (Random State Prop)" handleRandom={this.handleRandom} random={this.state.random}/>
             </div>
         );
     }

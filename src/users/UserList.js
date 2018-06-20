@@ -3,7 +3,14 @@ import UserListHeader from "./UserListHeader";
 
 class UserList extends Component {
 
+    //Method #1 for initial state
     state = {users : []};
+
+    constructor(props){
+        super(props);
+        //Method #2 for initial state
+        this.state = {users: []};
+    }
 
     componentWillMount() {
         fetch('https://jsonplaceholder.typicode.com/users')

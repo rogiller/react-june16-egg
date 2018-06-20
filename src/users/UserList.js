@@ -15,17 +15,20 @@ class UserList extends Component {
         console.log('componentDidMount');
     }
 
+    handleChange(){
+        console.log(arguments);
+    }
+
     render() {
         return (
             <div>
-                <UserListHeader displayText="USERS"/>
+                <UserListHeader displayText={"USERS"} handleChange={this.handleChange}/>
                 {this.state.users.map((item, index) => (
                     <ul className='indent' key={index}>{item.name}</ul>
                 ))}
             </div>
         );
     }
-
 
 }
 

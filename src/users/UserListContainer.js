@@ -22,18 +22,13 @@ class UserListContainer extends Component {
         console.log('componentDidMount');
     }
 
-    handleChange(){
+    handleUserListChange(){
         console.log(arguments);
     }
 
     render() {
         return (
-            <div>
-                <UserList displayText={"USERS"} handleChange={this.handleChange}/>
-                {this.state.users.map((item, index) => (
-                    <ul className='indent' key={index}>{item.name}</ul>
-                ))}
-            </div>
+            <UserList displayText={"USER LIST"} users={this.state.users} handleChange={this.handleUserListChange}/>
         );
     }
 

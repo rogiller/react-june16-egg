@@ -3,6 +3,9 @@ import "./UserList.css";
 
 const UserList = (props) => {
 
+    //this gets called any time that "props.users" state changes
+    console.log('render UserList');
+
     //fyi, rendering null is fine. React will just render nothing.
     let userTable = null;
 

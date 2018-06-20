@@ -2,10 +2,6 @@ import React, { PureComponent } from 'react';
 
 class RandomButton extends PureComponent {
 
-    constructor(props){
-        super(props);
-    }
-
     render() {
         console.log('render ' + this.props.btnName);
         return (

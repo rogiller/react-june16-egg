@@ -1,7 +1,7 @@
 import React from 'react';
 import "./UserListHeader.css";
 
-const UserListHeader = (props) => {
+const UserList = (props) => {
     if (props.displayText) return (
         <div className="userListHeader">
             <h3>{props.displayText}</h3>
@@ -10,4 +10,4 @@ const UserListHeader = (props) => {
     return (<h1 className="nothingStyle">NONE</h1>);
 };
 
-export default UserListHeader;
+export default UserList;

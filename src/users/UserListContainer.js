@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserListHeader from "./UserListHeader";
+import UserList from "./UserList";
 
 class UserListContainer extends Component {
 
@@ -29,7 +29,7 @@ class UserListContainer extends Component {
     render() {
         return (
             <div>
-                <UserListHeader displayText={"USERS"} handleChange={this.handleChange}/>
+                <UserList displayText={"USERS"} handleChange={this.handleChange}/>
                 {this.state.users.map((item, index) => (
                     <ul className='indent' key={index}>{item.name}</ul>
                 ))}

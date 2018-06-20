@@ -6,9 +6,28 @@ const UserList = (props) => {
         <div className="userList">
             <h3>{props.displayText}</h3>
             <input onChange={props.handleChange}/>
-            {props.users.map((item, index) => (
-                <ul className='indent' key={index}>{item.name}</ul>
-            ))}
+            <br/>
+            <br/>
+            <table>
+                <tbody>
+                    <tr className="userListHeader">
+                        <td>Name</td>
+                        <td>User Name</td>
+                        <td>Email</td>
+                        <td>Phone</td>
+                        <td>Website</td>
+                    </tr>
+                    {props.users.map((item, index) => (
+                        <tr key={index}>
+                            <td>{item.name}</td>
+                            <td>{item.username}</td>
+                            <td>{item.email}</td>
+                            <td>{item.phone}</td>
+                            <td>{item.website}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>)
 };
 

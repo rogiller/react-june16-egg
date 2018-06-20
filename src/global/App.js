@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import UserList from "../users/UserList";
+import UserListContainer from "../users/UserListContainer";
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Let's Reactify!</h1>
         </header>
-        <UserList/>
+        <UserListContainer/>
       </div>
     );
   }

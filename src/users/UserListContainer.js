@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UserListHeader from "./UserListHeader";
 
-class UserList extends Component {
+class UserListContainer extends Component {
 
     //Method #1 for initial state
     state = {users : []};
@@ -39,4 +39,4 @@ class UserList extends Component {
 
 }
 
-export default UserList;
+export default UserListContainer;

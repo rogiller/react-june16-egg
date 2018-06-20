@@ -42,7 +42,7 @@ const UserList = (props) => {
             <br/>
             <br/>
             {userTable}
-        </div>)
+        </div>);
 };
 
 export default UserList;
